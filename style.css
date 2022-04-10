@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: linear-gradient(to bottom, #6b7bd1, #6e7ccf, #717dcc, #737eca, #767fc8, #877cc8, #9779c6, #a776c2, #c76bb5, #e2619e, #f45b81, #fb5f5f);
+}
+ul {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.25);
+}
+ul li {
+  list-style: none;
+}
+ul li a {
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  padding: 20px 30px;
+  z-index: 1000;
+  backdrop-filter: blur(15px);
+}
+
+ul li a ion-icon {
+  font-size: 2.5em;
+  pointer-events: none;
+  opacity: 0.25;
+  transition: 0.25s;
+}
+ul li.active a ion-icon {
+  opacity: 1;
+}
+#marker {
+  position: absolute;
+  top: 0;
+  transition: 0.5s;
+  z-index: 1;
+}
+#marker::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 40px;
+  border-radius: 8px;
+}
+ul li:nth-child(1).active ~ #marker::before {
+
+  background: #e476f5;
+  box-shadow: 0 0 19px #e476f5,
+  0 0 30px #e476f5,
+  0 0 45px #e476f5,
+  0 0 50px #e476f5;
+}
+ul li:nth-child(2).active ~ #marker::before {
+
+  background: #76f5e2;
+  box-shadow: 0 0 19px #76f5e2,
+  0 0 30px #76f5e2,
+  0 0 45px #76f5e2,
+  0 0 50px #76f5e2;
+}
+ul li:nth-child(3).active ~ #marker::before {
+
+  background: #5dfa62;
+  box-shadow: 0 0 19px #5dfa62,
+  0 0 30px #5dfa62,
+  0 0 45px #5dfa62,
+  0 0 50px #5dfa62;
+}
+ul li:nth-child(4).active ~ #marker::before {
+
+  background: #fcab32;
+  box-shadow: 0 0 19px #fcab32,
+  0 0 30px #fcab32,
+  0 0 45px #fcab32,
+  0 0 50px #fcab32;
+}
+ul li:nth-child(5).active ~ #marker::before {
+
+  background: #f42415;
+  box-shadow: 0 0 19px #f42415,
+  0 0 30px #f42415,
+  0 0 45px #f42415,
+  0 0 50px #f42415;
+}
